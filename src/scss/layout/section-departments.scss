@@ -1,0 +1,48 @@
+.section-departments {
+  padding: 120px 0;
+  background: #f7f7f7;
+
+  @media (max-width: 1119px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 991px) {
+    padding: 50px 0;
+  }
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.departments-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 50px;
+  margin-top: 80px;
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-top: 50px;
+  }
+
+  .department-icon {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .department-text {
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #000000;
+
+    @media (max-width: 991px) {
+      font-size: 15px;
+    }
+  }
+}

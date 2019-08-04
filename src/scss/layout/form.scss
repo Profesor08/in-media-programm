@@ -1,0 +1,122 @@
+.input-group {
+  display: flex;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
+
+  &:not(:first-child) {
+    margin-top: 30px;
+
+    @media (max-width: 991px) {
+      margin-top: 20px;
+    }
+  }
+
+  .form-input {
+    flex: 1;
+  }
+}
+
+.form-input {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid $color-line-dark;
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 0 20px 0 20px;
+  min-height: 60px;
+
+  &:hover {
+    cursor: text;
+  }
+
+  &:not(:last-child) {
+    @media (min-width: 992px) {
+      margin-right: 40px;
+    }
+  }
+
+  &:not(:first-child) {
+    @media (max-width: 991px) {
+      margin-top: 20px;
+    }
+  }
+
+  &.is-active {
+    .input-label {
+      top: 0;
+      transform: translate(0, 10px);
+    }
+  }
+
+  .input-label {
+    pointer-events: none;
+    font-family: Inter, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #909090;
+    position: absolute;
+    transition: ease transform 0.3s;
+    transform: translate(0, 23px);
+  }
+
+  .text-input {
+    border: 0;
+    width: 100%;
+    margin: 21px 0 13px 0;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: rgba(#111111, 0.6);
+    resize: vertical;
+    -webkit-appearance: textfield;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  textarea {
+    min-height: 80px;
+  }
+}
+
+.form-button {
+  width: 230px;
+  height: 60px;
+  background: $color-primary;
+  border-radius: 3px;
+  outline: none;
+  border: 0;
+  transition: ease background-color 0.3s;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    background: lighten($color-primary, 10%);
+  }
+
+  &:active {
+    background: darken($color-primary, 10%);
+  }
+}

@@ -1,0 +1,7 @@
+node_modules/
+.cache/
+.git/
+dist/
+package-lock.json
+*.zip
+.vscode/

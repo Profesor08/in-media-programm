@@ -1,0 +1,55 @@
+.section-activity {
+  background: #ffffff;
+  padding: 125px 0;
+
+  @media (max-width: 1119px) {
+    padding: 60px 0;
+  }
+
+  @media (max-width: 991px) {
+    padding: 50px 0;
+  }
+}
+
+.activity-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 65px 220px;
+  padding: 0 180px 0 0;
+
+  @media (max-width: 1119px) {
+    padding: 0;
+    grid-gap: 60px;
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+
+  .activity-item {
+    .activity-icon {
+      height: 60px;
+      display: flex;
+      align-items: center;
+
+      svg {
+        width: 60px;
+        height: auto;
+      }
+    }
+
+    .activity-title {
+      margin: 20px 0 15px 0;
+    }
+
+    .activity-text {
+      font-family: Inter, sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 25px;
+      color: $color-dark;
+    }
+  }
+}
