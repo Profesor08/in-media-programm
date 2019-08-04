@@ -11,15 +11,21 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cssnano": "^4.1.10",
-    "sass": "^1.22.9",
-    "typescript": "^3.5.3"
-  },
-  "dependencies": {
     "autoprefixer": "^9.6.1",
+    "cssnano": "^4.1.10",
     "lodash.escaperegexp": "^4.1.2",
     "postcss-modules": "^1.4.1",
     "replace-in-file": "^4.1.1",
+    "sass": "^1.22.9",
+    "typescript": "^3.5.3",
+    "parcel-plugin-clean-easy": "^1.0.2"
+  },
+  "dependencies": {
     "scroll-into-view": "^1.9.7"
-  }
+  },
+  "parcelCleanPaths": [
+    "docs/",
+    "docs/assets",
+    "docs/static"
+  ]
 }

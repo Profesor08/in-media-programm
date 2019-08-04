@@ -12,5 +12,12 @@ export function initHeader() {
         button.classList.add("is-active");
       }
     });
+
+    Array.from(header.querySelectorAll(".nav-link")).forEach(link => {
+      link.addEventListener("click", () => {
+        header.classList.remove("is-active");
+        button.classList.remove("is-active");
+      });
+    });
   }
 }

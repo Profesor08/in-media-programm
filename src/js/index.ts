@@ -27,9 +27,13 @@ import { initHeader } from "./layout/Header";
       map({
         lang: "ru_RU",
         container: mapContainer,
-        type: "yandex",
+        type: "google",
         zoom: 7,
         center: [55.76, 37.64],
+        placeMark: {
+          position: [55.684758, 37.738521],
+          content: "Какой-то <b>текст</b> по клику",
+        },
       });
     }
   } catch (err) {
@@ -51,15 +55,40 @@ try {
 
 // initialization of scroll-down button
 try {
-  const scrollDownButton = document.querySelector(".scroll-down");
-  const scrollTargetElement = document.querySelector(".section-activity");
-
-  if (
-    scrollDownButton instanceof HTMLElement &&
-    scrollTargetElement instanceof HTMLElement
-  ) {
-    const scrollDown = new ScrollTo(scrollDownButton, scrollTargetElement);
-  }
+  new ScrollTo([
+    {
+      button: ".logo-col",
+      target: ".section-about",
+    },
+    {
+      button: ".scroll-down",
+      target: ".section-activity",
+    },
+    {
+      button: ".nav-company",
+      target: ".section-about",
+    },
+    {
+      button: ".nav-activity",
+      target: ".section-activity",
+    },
+    {
+      button: ".nav-departments",
+      target: ".section-departments",
+    },
+    {
+      button: ".nav-team",
+      target: ".section-technologies",
+    },
+    {
+      button: ".nav-contacts",
+      target: ".section-contacts",
+    },
+    {
+      button: ".start-button",
+      target: ".contact-form",
+    },
+  ]);
 } catch (err) {
   console.log("Error in scroll down initialization");
   console.error(err);
